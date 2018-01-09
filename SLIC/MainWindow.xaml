@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SLIC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="SLIC" Height="454" Width="1302.5" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <Grid>
-        
+        <Image x:Name="imageOriginal" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="400" MouseLeftButtonDown="imageOriginal_MouseLeftButtonDown" MouseRightButtonDown="imageOriginal_MouseRightButtonDown"/>
+
+        <Button x:Name="buttonReset" HorizontalAlignment="Right" VerticalAlignment="Top"  Width="80" Height="50" Content="Reset" Margin="0,0,0,0" Click="buttonReset_Click"></Button>
+        <Button x:Name="buttonSLIC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="50" Content="SLIC" Margin="0,55,0,0" Click="buttonSLIC_Click"></Button>
+
+        <Label Content="Centers" HorizontalAlignment="Right" Margin="0,113,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="textboxNumberOfCenters" HorizontalAlignment="Right" Height="24" Margin="0,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="400"/>
+
+        <Label x:Name="labelTimeTaken" Content="" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+        <Label Content="M" HorizontalAlignment="Right" Margin="0,164,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="textboxM" HorizontalAlignment="Right" Height="24" Margin="0,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="5"/>
+        <Image x:Name="imageSegmented" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="400"  MouseRightButtonDown="imageSegmented_MouseRightButtonDown" Margin="400,0,0,0"/>
+        <Image x:Name="imageSegmentedWithEdge" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="400" MouseRightButtonDown="imageSegmentedWithEdge_MouseRightButtonDown" Margin="800,0,0,0"/>
+        <Label Content="Edge Color" HorizontalAlignment="Right" Margin="0,211,0,0" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="comboBoxEdgeColor" HorizontalAlignment="Left" Margin="1214,234,0,0" VerticalAlignment="Top" Width="80"/>
+
     </Grid>
 </Window>
