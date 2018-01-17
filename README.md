@@ -14,21 +14,21 @@ Program supports features
    
 How to use
 -----
-  - Load image (double left click on image to load)
+  - Load image
   - Run algorithm with predefined parameters
   - Save image (right click on processed image to save)
   
 Examples
 -----
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example2.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example3.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example4.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example5.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example6.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example7.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example8.jpg?raw=true" alt="Example"/>
-<img src="https://github.com/kruherson1337/SLIC/blob/master/example9.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example2.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example3.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example4.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example5.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example6.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example7.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example8.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example9.jpg?raw=true" alt="Example"/>
 
 References
 -----
