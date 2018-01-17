@@ -2,6 +2,11 @@
 
 SLIC - Simple Linear Iterative Clustering C# .NET Framework - 2018
 
+Help
+-----
+
+More on algorithm find in [SLIC Article](https://infoscience.epfl.ch/record/177415/files/Superpixel_PAMI2011-2.pdf)
+
 Requirements
 -----
   - Target framework: .NET Framework 4.6.1
