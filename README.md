@@ -14,7 +14,7 @@ Program supports features
    
 How to use
 -----
-  - Load image (double left click on image to load)
+  - Load image
   - Run algorithm with predefined parameters
   - Save image (right click on processed image to save)
   
