@@ -35,7 +35,7 @@ namespace SLIC
         /// <returns>bitmapSource</returns>
         public static BitmapSource getSource(Bitmap bmp)
         {
-            return System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
+            BitmapSource bmpSource = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
                 bmp.GetHbitmap(),
                 IntPtr.Zero,
                 Int32Rect.Empty,
@@ -43,6 +43,8 @@ namespace SLIC
                     bmp.Width,
                     bmp.Height
                     ));
+            bmp.Dispose();
+            return bmpSource;
         }
 
         /// <summary>
@@ -56,9 +58,9 @@ namespace SLIC
         {
             return new System.Windows.Controls.Image
             {
+                Width = bmp.Width,
+                Height = bmp.Height,
                 Source = getSource(bmp),
-                Width = width,
-                Height = height,
                 Stretch = Stretch.Fill
             };
         }

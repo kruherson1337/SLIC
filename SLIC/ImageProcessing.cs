@@ -71,9 +71,16 @@ namespace SLIC
             MyBitplane edges = new MyBitplane(image.Width, image.Height);
             MyImage newImage = new MyImage(image.Width, image.Height, image.NumCh);
 
-            for (int y = 1; y < image.Height; ++y)
-                for (int x = 1; x < image.Width; ++x)
+            for (int y = 0; y < image.Height; ++y)
+                for (int x = 0; x < image.Width; ++x)
                 {
+                    if(y == 0 || x == 0)
+                    {
+                        newImage.Bitplane[2].SetPixel(x, y, (int)Math.Round(image.Bitplane[2].GetPixel(x, y)));
+                        newImage.Bitplane[1].SetPixel(x, y, (int)Math.Round(image.Bitplane[1].GetPixel(x, y)));
+                        newImage.Bitplane[0].SetPixel(x, y, (int)Math.Round(image.Bitplane[0].GetPixel(x, y)));
+                        continue;
+                    }
                     double p = labels.GetPixel(x, y);
                     double p1 = labels.GetPixel(x, y - 1);
                     double p2 = labels.GetPixel(x - 1, y - 1);
