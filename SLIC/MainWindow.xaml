@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SLIC" Height="837" Width="1301.167" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <Grid>
-        <Image x:Name="imageOriginal" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="600" MouseRightButtonDown="imageOriginal_MouseRightButtonDown" Stretch="UniformToFill"/>
+        <Image x:Name="imageOriginal" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="600" MouseRightButtonDown="imageOriginal_MouseRightButtonDown" Stretch="Fill"/>
         <Button x:Name="buttonSLIC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="50" Content="SLIC" Margin="0,10,0,0" Click="buttonSLIC_Click"></Button>
 
         <Label Content="Centers" HorizontalAlignment="Right" Margin="0,65,0,0" VerticalAlignment="Top" Width="80"/>
@@ -15,9 +15,9 @@
 
         <Label x:Name="labelTimeTaken" Content="" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
         <Label Content="M" HorizontalAlignment="Right" Margin="0,116,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox x:Name="textboxM" HorizontalAlignment="Right" Height="24" Margin="0,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="5"/>
-        <Image x:Name="imageSegmented" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="600"  MouseRightButtonDown="imageSegmented_MouseRightButtonDown" Margin="600,0,0,0" Stretch="UniformToFill"/>
-        <Image x:Name="imageSegmentedWithEdge" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="600" MouseRightButtonDown="imageSegmentedWithEdge_MouseRightButtonDown" Margin="600,400,0,0" Stretch="UniformToFill"/>
+        <TextBox x:Name="textboxM" HorizontalAlignment="Right" Height="24" Margin="0,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="3"/>
+        <Image x:Name="imageSegmented" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="600"  MouseRightButtonDown="imageSegmented_MouseRightButtonDown" Margin="600,0,0,0" Stretch="Fill"/>
+        <Image x:Name="imageSegmentedWithEdge" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="600" MouseRightButtonDown="imageSegmentedWithEdge_MouseRightButtonDown" Margin="600,400,0,0" Stretch="Fill"/>
         <Label Content="Edge Color" HorizontalAlignment="Right" Margin="0,163,0,0" VerticalAlignment="Top" Width="80"/>
         <ComboBox x:Name="comboBoxEdgeColor" HorizontalAlignment="Right" Margin="0,186,0,0" VerticalAlignment="Top" Width="80"/>
 

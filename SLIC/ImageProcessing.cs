@@ -32,8 +32,8 @@ namespace SLIC
                     int i = 0;
                     foreach (Center center in centers)
                     {
-                        for (int l = (int)Math.Round(center.Y - S); l < (int)Math.Round(center.Y + S); l++)
-                            for (int k = (int)Math.Round(center.X - S); k < (int)Math.Round(center.X + S); k++)
+                        for (int k = (int)Math.Round(center.X - S); k < (int)Math.Round(center.X + S); k++)
+                            for (int l = (int)Math.Round(center.Y - S); l < (int)Math.Round(center.Y + S); l++)
                                 if (k >= 0 && k < image.Width && l >= 0 && l < image.Height)
                                 {
                                     double L = image.Bitplane[2].GetPixel(k, l);
@@ -119,9 +119,9 @@ namespace SLIC
                 for (int x = 0; x < image.Width; ++x)
                     if (labels.GetPixel(x, y) != -1)
                     {
-                        newImage.Bitplane[2].SetPixel(x, y, centers[(int)Math.Round(labels.GetPixel(x, y))].L);
-                        newImage.Bitplane[1].SetPixel(x, y, centers[(int)Math.Round(labels.GetPixel(x, y))].A);
-                        newImage.Bitplane[0].SetPixel(x, y, centers[(int)Math.Round(labels.GetPixel(x, y))].B);
+                        newImage.Bitplane[2].SetPixel(x, y, centers[(int)Math.Floor(labels.GetPixel(x, y))].L);
+                        newImage.Bitplane[1].SetPixel(x, y, centers[(int)Math.Floor(labels.GetPixel(x, y))].A);
+                        newImage.Bitplane[0].SetPixel(x, y, centers[(int)Math.Floor(labels.GetPixel(x, y))].B);
                     }
 
             return newImage;
@@ -137,7 +137,7 @@ namespace SLIC
             for (int y = 0; y < image.Height; ++y)
                 for (int x = 0; x < image.Width; ++x)
                 {
-                    int centerIndex = (int)Math.Round(labels.GetPixel(x, y));
+                    int centerIndex = (int)Math.Floor(labels.GetPixel(x, y));
                     if (centerIndex != -1)
                     {
                         double L = image.Bitplane[2].GetPixel(x, y);
@@ -172,14 +172,17 @@ namespace SLIC
         private static Center[] createCenters(MyImage image, double numberOfCenters, double S)
         {
             List<Center> centers = new List<Center>();
-            for (double y = S; y < image.Height - S / 2; y += S)
-                for (double x = S; x < image.Width - S / 2; x += S)
+            for (double x = S; x < image.Width - S / 2; x += S)
+                for (double y = S; y < image.Height - S / 2; y += S)
                 {
-                    double L = image.Bitplane[2].GetPixel((int)Math.Round(x), (int)Math.Round(y));
-                    double A = image.Bitplane[1].GetPixel((int)Math.Round(x), (int)Math.Round(y));
-                    double B = image.Bitplane[0].GetPixel((int)Math.Round(x), (int)Math.Round(y));
+                    int xx = (int)Math.Floor(x);
+                    int yy = (int)Math.Floor(y);
 
-                    centers.Add(new Center(x, y, L, A, B, 0));
+                    double L = image.Bitplane[2].GetPixel(xx, yy);
+                    double A = image.Bitplane[1].GetPixel(xx, yy);
+                    double B = image.Bitplane[0].GetPixel(xx, yy);
+
+                    centers.Add(new Center(xx, yy, L, A, B, 0));
                 }
             return centers.ToArray();
         }
