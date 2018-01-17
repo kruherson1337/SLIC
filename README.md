@@ -20,7 +20,7 @@ How to use
   
 Examples
 -----
-<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example2.jpg?raw=true" alt="Example"/>
+<img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example.jpg?raw=true" alt="Example"/>
 <img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example2.jpg?raw=true" alt="Example"/>
 <img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example3.jpg?raw=true" alt="Example"/>
 <img src="https://github.com/kruherson1337/SLIC/blob/master/examples/example4.jpg?raw=true" alt="Example"/>
